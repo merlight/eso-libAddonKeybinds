@@ -27,7 +27,7 @@
 
 --]========================================================================]
 
-local myNAME, myVERSION = "libAddonKeybinds", 1
+local myNAME, myVERSION = "libAddonKeybinds", 2
 local LAK = LibStub:NewLibrary(myNAME, myVERSION)
 if not LAK then return end -- already loaded
 
@@ -176,11 +176,11 @@ local function onLoad(eventCode, addonName)
     end
 
     hookKeybindingListCallbacks(CATEGORY_DATA_TYPE,
-                                "libAddonKeybinds:SetupCategoryHeader",
-                                "libAddonKeybinds:HideCategoryHeader")
+                                "libAddonKeybinds.SetupCategoryHeader",
+                                "libAddonKeybinds.HideCategoryHeader")
     hookKeybindingListCallbacks(KEYBIND_DATA_TYPE,
-                                "libAddonKeybinds:SetupKeybindRow",
-                                "libAddonKeybinds:HideKeybindRow")
+                                "libAddonKeybinds.SetupKeybindRow",
+                                "libAddonKeybinds.HideKeybindRow")
     hookKeybindingListFilter()
 end
 
