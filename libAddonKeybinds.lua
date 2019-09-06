@@ -27,9 +27,9 @@
 
 --]========================================================================]
 
-local myNAME, myVERSION = "libAddonKeybinds", 2
-local LAK = LibStub:NewLibrary(myNAME, myVERSION)
-if not LAK then return end -- already loaded
+local myNAME, myVERSION = "libAddonKeybinds", 3
+local LAK = LibStub and LibStub:NewLibrary(myNAME, myVERSION) or {}
+libAddonKeybinds = LAK
 
 -- these must match esoui/ingame/keybindings/keyboard/keybindings.lua
 local LAYER_DATA_TYPE = 1
